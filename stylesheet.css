@@ -1,0 +1,101 @@
+.bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+}
+
+.title {
+    color: #ba5caa;
+    font-family: serif;
+    font-size: 100px;
+    text-align: center;
+    padding: 40px;
+    margin-bottom: 200px;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 5s ease 0.1s 1 normal;
+}
+
+@keyframes fadeIn {
+    /*animetion-nameで設定した値を書く*/
+    0% {
+        opacity: 0
+    }
+    /*アニメーション開始時は不透明度0%*/
+    100% {
+        opacity: 1
+    }
+    /*アニメーション終了時は不透明度100%*/
+}
+
+p {
+    text-align: center;
+    font-family: serif;
+    color: blanchedalmond;
+    position: relative;
+    z-index: 2;
+}
+
+.prof1 {
+    float: left;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 120px;
+    animation: fadeIn 10s ease 0.05s 1 normal;
+}
+
+.prof2 {
+    float: left;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 120px;
+    padding-left: 50px;
+    animation: fadeIn 10s ease 0.05s 1 normal;
+}
+
+.prof3 {
+    float: left;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 120px;
+    animation: fadeIn 10s ease 0.05s 1 normal;
+}
+
+.sc {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 70%;
+    height: 70%;
+    position: relative;
+    z-index: 1;
+}
+
+.tw {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 70%;
+    height: 70%;
+    position: relative;
+    z-index: 1;
+}
+
+.nt {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 60%;
+    height: 60%;
+    position: relative;
+    z-index: 1;
+}
