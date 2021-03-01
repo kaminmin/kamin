@@ -24,7 +24,7 @@
 h2 {
     color: #ba5caa;
     font-family: serif;
-    font-size: 10px;
+    font-size: 100px;
 }
 
 @keyframes fadeIn {
@@ -42,7 +42,7 @@ h2 {
 p {
     text-align: center;
     font-family: serif;
-    font-size: 40px;
+    font-size: 60px;
     color: black;
     position: relative;
     z-index: 2;
