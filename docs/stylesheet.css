@@ -59,6 +59,7 @@ p {
     background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
     position: relative;
     z-index: 2;
+    font-size: x-large;
 }
 
 s1 {
