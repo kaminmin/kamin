@@ -27,7 +27,7 @@ a {
     margin-bottom: 50px;
     position: relative;
     z-index: 2;
-    animation: fadeIn 5s ease 0.1s 1 normal;
+    animation: fadeIn 7s ease 0.1s 1 alternate;
 }
 
 h2 {
@@ -214,6 +214,32 @@ aside {
 
 .grid_aside {
     grid-area: aside;
+}
+
+ul {
+    width: 1fr;
+}
+
+li {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+}
+
+.day {
+    font-size: large;
+}
+
+.label {
+    background-color: rgb(233, 102, 172);
+    border-radius: 3px;
+    color: #fff;
+    padding: 2px 5px;
+    margin: 0 20px;
+}
+
+.textz {
+    font-size: large;
 }
 
 x1 {
