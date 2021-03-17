@@ -82,7 +82,7 @@ s4 {
     float: left;
     position: relative;
     z-index: 1;
-    width: 25%;
+    width: calc(100%/3);
     animation: fadeIn 10s ease 0.05s 1 normal;
 }
 
@@ -90,7 +90,7 @@ s4 {
     float: left;
     position: relative;
     z-index: 1;
-    width: 25%;
+    width: calc(100%/3);
     animation: fadeIn 10s ease 0.05s 1 normal;
 }
 
@@ -98,7 +98,7 @@ s4 {
     float: left;
     position: relative;
     z-index: 1;
-    width: 25%;
+    width: calc(100%/3);
     animation: fadeIn 10s ease 0.05s 1 normal;
 }
 
