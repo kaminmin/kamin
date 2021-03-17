@@ -15,8 +15,8 @@ a {
 }
 
 .nk {
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
 }
 
 .title {
@@ -297,7 +297,7 @@ ul {
 li {
     display: flex;
     padding: 10px;
-    border-bottom: 1px solid #000;
+    border-bottom: 2px solid rgb(131, 2, 138);
 }
 
 .day {
@@ -306,7 +306,7 @@ li {
 
 .label {
     background-color: rgb(233, 102, 172);
-    border-radius: 3px;
+    border-radius: px;
     color: #fff;
     padding: 2px 5px;
     margin: 0 20px;
