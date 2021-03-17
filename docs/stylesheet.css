@@ -83,6 +83,7 @@ s4 {
     position: relative;
     z-index: 1;
     width: 25%;
+    height: 3vmax;
     animation: fadeIn 10s ease 0.05s 1 normal;
 }
 
@@ -91,6 +92,7 @@ s4 {
     position: relative;
     z-index: 1;
     width: 25%;
+    height: 3vmax;
     animation: fadeIn 10s ease 0.05s 1 normal;
 }
 
@@ -99,6 +101,7 @@ s4 {
     position: relative;
     z-index: 1;
     width: 25%;
+    height: 3vmax;
     animation: fadeIn 10s ease 0.05s 1 normal;
 }
 
