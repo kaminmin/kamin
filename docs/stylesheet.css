@@ -156,64 +156,83 @@ aside {
     padding: 10px;
 }
 
+body {
+    min-height: 100vh;
+    /* 高さの最小を画面いっぱいに設定 */
+    margin: 0;
+    /* ブラウザのデフォルトのスタイルを解除 */
+}
 
-/*
 header {
-    
+    flex-basis: 50px;
+    /* flex-basis（初期値）を指定 */
 }
 
 footer {
- 
+    flex-basis: 100px;
+    /* flex-basis（初期値）を指定 */
 }
 
-main {
-   
-}
 
-nav {
-    
-}
+/*
+main {}
 
-aside {
- 
-}
+nav {}
+
+aside {}
 */
 
-.grid_container {
-    display: grid;
-    /* グリッドコンテナであることを定義 */
-    grid-template-areas: 'header'/* 1行目 */
-    'nav'/* 2行目 */
-    'main'/* 3行目 */
-    'aside'/* 4行目 */
-    'footer'/* 5行目 */
-    ;
-    grid-template-rows: 60px 50px 1fr auto 60px;
-    /* 行の高さ */
-    grid-template-columns: 1fr;
-    /* 列の幅 */
-    grid-row-gap: 0;
-    /*行と行の間の余白 */
+
+/* Flex Layout */
+
+.flex {
+    display: -ms-flexbox;
+    /* IE */
+    display: flex;
 }
 
-.grid_header {
-    grid-area: header;
+.flex-vertical {
+    -ms-flex-direction: column;
+    /* IE */
+    flex-direction: column;
 }
 
-.grid_footer {
-    grid-area: footer;
+.flex-1 {
+    -ms-flex: 1 1 0.000000001px;
+    /* IE */
+    flex: 1;
+    flex-basis: 0.000000001px;
+    /* IE */
 }
 
-.grid_main {
-    grid-area: main;
+
+/* アイテムの表示順序 */
+
+.order-1 {
+    -ms-flex-order: 1;
+    order: 1;
 }
 
-.grid_nav {
-    grid-area: nav;
-}
 
-.grid_aside {
-    grid-area: aside;
+/* 画面サイズの横幅が960px以上である場合 */
+
+@media screen and (min-width: 960px) {
+    .content-body {
+        /* Flexで横並び */
+        -ms-flex-direction: row;
+        /* IE */
+        flex-direction: row;
+    }
+    .content-body nav,
+    .content-body aside {
+        flex-basis: 200px;
+        /* flex-basis（初期値）を指定 */
+    }
+    .content-body nav {
+        /* アイテムの表示順序 */
+        -ms-flex-order: -1;
+        order: -1;
+    }
 }
 
 ul {
