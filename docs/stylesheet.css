@@ -210,6 +210,32 @@ aside {}
     order: 1;
 }
 
+ul {
+    width: 1fr;
+}
+
+li {
+    display: flex;
+    padding: 10px;
+    border-bottom: 2px solid rgb(131, 2, 138);
+}
+
+.day {
+    font-size: large;
+}
+
+.label {
+    background-color: rgb(233, 102, 172);
+    border-radius: px;
+    color: #fff;
+    padding: 2px 5px;
+    margin: 0 20px;
+}
+
+.textz {
+    font-size: x-small;
+}
+
 
 /* 画面サイズの横幅が960px以上である場合 */
 
@@ -272,6 +298,9 @@ aside {}
         z-index: 1;
         margin: 100px;
     }
+    .textz {
+        font-size: large;
+    }
     .content-body {
         /* Flexで横並び */
         -ms-flex-direction: row;
@@ -288,32 +317,6 @@ aside {}
         -ms-flex-order: -1;
         order: -1;
     }
-}
-
-ul {
-    width: 1fr;
-}
-
-li {
-    display: flex;
-    padding: 10px;
-    border-bottom: 2px solid rgb(131, 2, 138);
-}
-
-.day {
-    font-size: large;
-}
-
-.label {
-    background-color: rgb(233, 102, 172);
-    border-radius: px;
-    color: #fff;
-    padding: 2px 5px;
-    margin: 0 20px;
-}
-
-.textz {
-    font-size: large;
 }
 
 x1 {
