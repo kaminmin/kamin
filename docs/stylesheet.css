@@ -127,7 +127,9 @@ s4 {
     height: 54%;
     position: relative;
     z-index: 1;
-    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
 }
 
 .kamin {
