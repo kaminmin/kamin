@@ -236,6 +236,13 @@ li {
     padding: 2px 5px;
     margin: 0 20px;
 }
+.labels {
+    background-color: rgb(117, 6, 123);
+    border-radius: px;
+    color: #fff;
+    padding: 2px 5px;
+    margin: 0 20px;
+}
 
 .textz {
     font-size: x-small;
