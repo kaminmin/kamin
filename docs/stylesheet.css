@@ -80,7 +80,6 @@ s4 {
 
 .prof1 {
     float: left;
-    text-align: center;
     position: relative;
     z-index: 1;
     width: 25%;
@@ -89,7 +88,6 @@ s4 {
 
 .prof2 {
     float: left;
-    text-align: center;
     position: relative;
     z-index: 1;
     width: 25%;
@@ -98,7 +96,6 @@ s4 {
 
 .prof3 {
     float: left;
-    text-align: center;
     position: relative;
     z-index: 1;
     width: 25%;
@@ -364,6 +361,15 @@ x1 span:before {
 
 x1 span:after {
     bottom: 15px;
+}
+
+g {
+    color: black;
+}
+
+pink {
+    color: rgb(106, 56, 155);
+    text-decoration: rgb(227, 104, 238);
 }
 
 
