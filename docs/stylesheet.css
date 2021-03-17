@@ -83,7 +83,6 @@ s4 {
     position: relative;
     z-index: 1;
     width: 25%;
-    height: 5vmax;
     animation: fadeIn 10s ease 0.05s 1 normal;
 }
 
@@ -92,7 +91,6 @@ s4 {
     position: relative;
     z-index: 1;
     width: 25%;
-    height: 5vmax;
     animation: fadeIn 10s ease 0.05s 1 normal;
 }
 
@@ -101,7 +99,6 @@ s4 {
     position: relative;
     z-index: 1;
     width: 25%;
-    height: 5vmax;
     animation: fadeIn 10s ease 0.05s 1 normal;
 }
 
@@ -113,7 +110,7 @@ s4 {
     height: 70%;
     position: relative;
     z-index: 1;
-    margin: 100px;
+    margin: 10px;
 }
 
 .tw {
@@ -121,7 +118,7 @@ s4 {
     height: 70%;
     position: relative;
     z-index: 1;
-    margin: 100px;
+    margin: 10px;
 }
 
 .nt {
@@ -129,7 +126,7 @@ s4 {
     height: 54%;
     position: relative;
     z-index: 1;
-    margin: 100px;
+    margin: 10px;
 }
 
 .kamin {
