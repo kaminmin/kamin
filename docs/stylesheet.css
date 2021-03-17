@@ -15,8 +15,8 @@ a {
 }
 
 .nk {
-    width: 20%;
-    height: 20%;
+    width: 50%;
+    height: 50%;
 }
 
 .title {
@@ -34,7 +34,7 @@ h2 {
     padding: 1rem .5rem;
     color: blueviolet;
     font-family: serif;
-    font-size: 90px;
+    font-size: 50px;
     background-image: -webkit-linear-gradient(315deg, #594f7b 0%, #7c54a7 29%, #ff1361 67%, #fff800 100%);
     background-image: linear-gradient(-225deg, #06040b 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
 }
@@ -83,7 +83,7 @@ s4 {
     text-align: center;
     position: relative;
     z-index: 1;
-    width: calc(100%/3);
+    width: 25%;
     animation: fadeIn 10s ease 0.05s 1 normal;
 }
 
@@ -92,7 +92,7 @@ s4 {
     text-align: center;
     position: relative;
     z-index: 1;
-    width: calc(100%/3);
+    width: 25%;
     animation: fadeIn 10s ease 0.05s 1 normal;
 }
 
@@ -101,7 +101,7 @@ s4 {
     text-align: center;
     position: relative;
     z-index: 1;
-    width: calc(100%/3);
+    width: 25%;
     animation: fadeIn 10s ease 0.05s 1 normal;
 }
 
@@ -109,24 +109,24 @@ s4 {
 /*画像の処理など*/
 
 .sc {
-    width: 35%;
-    height: 35%;
+    width: 70%;
+    height: 70%;
     position: relative;
     z-index: 1;
     margin: 100px;
 }
 
 .tw {
-    width: 35%;
-    height: 35%;
+    width: 70%;
+    height: 70%;
     position: relative;
     z-index: 1;
     margin: 100px;
 }
 
 .nt {
-    width: 27%;
-    height: 27%;
+    width: 54%;
+    height: 54%;
     position: relative;
     z-index: 1;
     margin: 100px;
@@ -144,7 +144,7 @@ s4 {
 body {
     margin: 0;
     padding: 0;
-    background-image: url("pic.jpg");
+    background-image: url("/Users/kamin/Downloads/pic.jpg");
 }
 
 header,
@@ -217,6 +217,64 @@ aside {}
 /* 画面サイズの横幅が960px以上である場合 */
 
 @media screen and (min-width: 960px) {
+    .nk {
+        width: 20%;
+        height: 20%;
+    }
+    h2 {
+        padding: 1rem .5rem;
+        color: blueviolet;
+        font-family: serif;
+        font-size: 100px;
+        background-image: -webkit-linear-gradient(315deg, #594f7b 0%, #7c54a7 29%, #ff1361 67%, #fff800 100%);
+        background-image: linear-gradient(-225deg, #06040b 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    }
+    .prof1 {
+        float: left;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        width: calc(100%/3);
+        animation: fadeIn 10s ease 0.05s 1 normal;
+    }
+    .prof2 {
+        float: left;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        width: calc(100%/3);
+        animation: fadeIn 10s ease 0.05s 1 normal;
+    }
+    .prof3 {
+        float: left;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        width: calc(100%/3);
+        animation: fadeIn 10s ease 0.05s 1 normal;
+    }
+    /*画像の処理など*/
+    .sc {
+        width: 35%;
+        height: 35%;
+        position: relative;
+        z-index: 1;
+        margin: 100px;
+    }
+    .tw {
+        width: 35%;
+        height: 35%;
+        position: relative;
+        z-index: 1;
+        margin: 100px;
+    }
+    .nt {
+        width: 27%;
+        height: 27%;
+        position: relative;
+        z-index: 1;
+        margin: 100px;
+    }
     .content-body {
         /* Flexで横並び */
         -ms-flex-direction: row;
