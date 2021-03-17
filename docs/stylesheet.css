@@ -144,7 +144,7 @@ s4 {
 body {
     margin: 0;
     padding: 0;
-    background-image: url("/Users/kamin/Downloads/pic.jpg");
+    background-image: url("pic.jpg");
 }
 
 header,
