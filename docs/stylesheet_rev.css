@@ -47,11 +47,24 @@ header {
 }
 
 
+/*newsboxセクション*/
+
+.newsbox {
+    margin-top: 100px;
+    padding-top: 20px;
+    width: 100%;
+    background: rgba(255, 52, 181, 0.1);
+}
+
+.videobox {
+    text-align: center;
+}
+
+
 /*workformセクション*/
 
 .workform {
     width: 100%;
-    margin-top: 100px;
     padding: 20px 0px;
     background: rgba(255, 52, 181, 0.1);
 }
@@ -98,6 +111,11 @@ h3 {
 
 a {
     text-decoration: none;
+    opacity: 1;
+}
+
+a:hover {
+    opacity: 0.3;
 }
 
 
@@ -132,6 +150,10 @@ a {
     text-align: center;
 }
 
+.portofolio h1 {
+    text-align: left;
+}
+
 .jacket_box {
     height: auto;
     width: 20%;
@@ -148,7 +170,28 @@ a {
 }
 
 
-/*文章タイトル*/
+/*ブートレグセクション*/
+
+.bootbox {
+    padding-bottom: 30px;
+}
+
+.boottitles {
+    padding-bottom: 10px;
+}
+
+.boottitles a {
+    color: #fee140;
+    opacity: 1;
+}
+
+.boottitles a:hover {
+    color: #fee140;
+    opacity: 0.3;
+}
+
+
+/*文章タイトルと後半文章セクション*/
 
 h1 {
     color: #fa709a;
@@ -157,6 +200,10 @@ h1 {
     margin-left: 5%;
     padding-right: 2%;
     padding-left: 2%;
+}
+
+.timeline {
+    padding-bottom: 40px;
 }
 
 
