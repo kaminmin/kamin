@@ -1,4 +1,8 @@
 @media(max-width:1000px) {
+    .iframe {
+        width: 100%;
+        height: auto;
+    }
     .jacket_box {
         height: auto;
         width: 30%;
@@ -28,6 +32,10 @@
 }
 
 @media(max-width:670px) {
+    .iframe {
+        width: 100%;
+        height: auto;
+    }
     .jacket_box {
         height: auto;
         width: 40%;
