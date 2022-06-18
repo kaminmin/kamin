@@ -1,5 +1,5 @@
 @media(max-width:1000px) {
-    .iframe {
+    iframe {
         width: 100%;
         height: auto;
     }
@@ -32,7 +32,7 @@
 }
 
 @media(max-width:670px) {
-    .iframe {
+    iframe {
         width: 100%;
         height: auto;
     }
