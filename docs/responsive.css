@@ -1,0 +1,17 @@
+@media(max-width:1000px) {
+    .jacket_box {
+        height: auto;
+        width: 30%;
+        margin: 30px 10px;
+        display: inline-block;
+    }
+}
+
+@media(max-width:670px) {
+    .jacket_box {
+        height: auto;
+        width: 45%;
+        margin: 30px 10px;
+        display: inline-block;
+    }
+}
