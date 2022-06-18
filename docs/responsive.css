@@ -1,6 +1,6 @@
 @media(max-width:1000px) {
     iframe {
-        width: 70%;
+        width: 80%;
         height: auto;
     }
     .jacket_box {
@@ -33,7 +33,7 @@
 
 @media(max-width:670px) {
     iframe {
-        width: 60%;
+        width: 70%;
         height: auto;
     }
     .jacket_box {
