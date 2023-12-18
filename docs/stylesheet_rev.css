@@ -1,10 +1,17 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #007bff; /* Example primary color */
+    --secondary-color: #6c757d; /* Example secondary color */
 }
 
 body {
     margin: 0;
-    font-family: serif;
+    font-family: 'Open Sans',　serif;
     animation: fadeIn 5s ease 0.1s 1 alternate;
 }
 
@@ -30,6 +37,7 @@ header {
     width: 100%;
     text-align: center;
     /*精緻な色合いをバックに*/
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
     background-image: -webkit-linear-gradient(315deg, #594f7b 0%, #d76ab8 29%, #e17fd6 67%, #ff00ea 100%);
     background-image: linear-gradient(-225deg, #c550d7 0%, #d367d3 29%, #ff1361 67%, #dc92d9 100%);
 }
@@ -112,10 +120,12 @@ h3 {
 a {
     text-decoration: none;
     opacity: 1;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     opacity: 0.3;
+    color: var(--primary-color);
 }
 
 
@@ -231,3 +241,8 @@ footer {
     }
     /*アニメーション終了時は不透明度100%*/
 }
+
+.fade-in-element {
+    animation: fadeIn 1s ease-in-out;
+}
+
