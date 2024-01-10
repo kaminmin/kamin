@@ -193,6 +193,20 @@ a:hover {
     padding-bottom: 30px;
 }
 
+.boot_jacket_box {
+    height: auto;
+    width: 15%;
+    margin: 30px 10px;
+    display: inline-block;
+}
+
+.radio_jacket_box {
+    height: auto;
+    width: 90%;
+    margin: 30px 10px;
+    display: inline-block;
+}
+
 .boottitles {
     padding-bottom: 10px;
 }
