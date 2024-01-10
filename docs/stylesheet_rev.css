@@ -20,7 +20,7 @@ body {
 }
 
 main {
-    background-image: url(kamin_ground.png);
+    background-color: #800000;
     background-size: cover;
     padding-bottom: 20px;
 }
