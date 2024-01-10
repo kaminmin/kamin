@@ -67,8 +67,12 @@ header {
 .videobox {
     text-align: center;
     padding-bottom: 1%;
+    padding-top: 0.5%;
 }
 
+.DM{
+    padding-bottom: 1%;
+}
 
 /*workformセクション*/
 
@@ -95,7 +99,7 @@ p {
 }
 
 g {
-    color: #ff1361;
+    color: maroon;
     font-style: oblique;
 }
 
@@ -114,18 +118,18 @@ h3 {
     padding: 10px 2%;
     font-size: smaller;
     color: #fff;
-    background-color: rgba(255, 52, 181, 0.1);
+    background-color: rgba(255, 52, 181, 0.05);
     border-radius: 15px;
 }
 
 a {
     text-decoration: none;
     opacity: 1;
-    transition: color 0.3s ease;
+    transition: color 0.1s ease;
 }
 
 a:hover {
-    opacity: 0.3;
+    opacity: 0.1;
     color: var(--primary-color);
 }
 
