@@ -49,6 +49,10 @@ header {
     transition: 0.3s;
 }
 
+li{
+    text-size:6px;
+}
+
 .nav-links li a:hover {
     color: var(--background-color);
 }
