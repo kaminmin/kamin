@@ -90,7 +90,7 @@ p {
 }
 
 g {
-    color: maroon;
+    color: red;
     font-style: oblique;
 }
 
@@ -234,9 +234,6 @@ h1 {
 footer {
     padding-top: 20px;
     text-align: center;
-    /*精緻な色合いをバックに*/
-    background-image: -webkit-linear-gradient(315deg, #594f7b 0%, #d76ab8 29%, #e17fd6 67%, #ff00ea 100%);
-    background-image: linear-gradient(-225deg, #c550d7 0%, #d367d3 29%, #ff1361 67%, #dc92d9 100%);
 }
 
 
