@@ -1,7 +1,6 @@
 @media (max-width: 1000px) {
-    .nav-links{
-        width: 50%;
-        text-size: small;
+    header{
+        text-size: smaller;
     }
     iframe {
         width: 90%;
@@ -33,9 +32,8 @@
 }
 
 @media (max-width: 670px) {
-    .nav-links{
-        width: 40%;
-        text-size: small;
+    header{
+        text-size: smaller;
     }
     iframe {
         width: 100%;
