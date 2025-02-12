@@ -74,8 +74,6 @@ p {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
     border-radius: 5px;
     color: var(--background-color);
     background: var(--background-color);
