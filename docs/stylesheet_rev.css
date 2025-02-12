@@ -4,11 +4,6 @@
     padding: 0;
 }
 
-:root {
-    --primary-color: #007bff; /* Example primary color */
-    --secondary-color: #6c757d; /* Example secondary color */
-}
-
 body {
     margin: 0;
     font-family: 'Open Sans',　serif;
