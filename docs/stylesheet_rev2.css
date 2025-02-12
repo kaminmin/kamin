@@ -37,7 +37,7 @@ header {
     list-style: none;
     display: flex;
     gap: 20px;
-    text-aligne: right;
+    text-align: right;
 }
 
 .nav-links li a {
@@ -65,7 +65,7 @@ h1, h2, h3 {
     color: var(--primary-color);
 }
 
-.newsbox, .workform, .bootbox {
+.newsbox, .workform {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     margin: 20px auto;
