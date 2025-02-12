@@ -125,7 +125,7 @@ a {
 
 a:hover {
     opacity: 0.1;
-    color: var(--primary-color);
+    color: #ba3f3f;
 }
 
 
