@@ -39,7 +39,6 @@ header {
     list-style: none;
     display: flex;
     gap: 20px;
-    text-align: right;
 }
 
 .nav-links li a {
@@ -79,7 +78,7 @@ p {
     margin: 10px;
     border-radius: 5px;
     color: #fff;
-    background: var(--primary-color);
+    background: var(--background-color);
     text-decoration: none;
     transition: 0.3s;
 }
