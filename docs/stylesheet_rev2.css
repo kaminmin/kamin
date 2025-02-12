@@ -97,15 +97,3 @@ footer {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .jacket_box, .boot_jacket_box {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
