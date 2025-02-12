@@ -51,7 +51,7 @@ header {
 }
 
 .nav-links li a:hover {
-    color: var(--primary-color);
+    color: var(--background-color);
 }
 
 .container {
@@ -67,8 +67,7 @@ h1, h2, h3 {
     color: var(--primary-color);
 }
 
-.newsbox, .workform {
-    background: rgba(255, 255, 255, 0.1);
+.newsbox, .workform, .bootbox {
     padding: 20px;
     margin: 20px auto;
     border-radius: 10px;
