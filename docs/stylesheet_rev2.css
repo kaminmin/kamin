@@ -36,7 +36,6 @@ header {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1%;
 }
 
 .nav-links li a {
