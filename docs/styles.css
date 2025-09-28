@@ -19,7 +19,7 @@
 /* 文字・色などのテーマ変数（カラートークン） */
 :root {
   /* ベースカラー */
-  --color-bg: deeppink;          /* 背景（既存の背景色を踏襲） */
+  --color-bg: #ff1493;          /* 背景（既存の背景色を踏襲） */
   --color-text: #ffffff;        /* 文章の基本色 */
   --color-accent: #fa709a;      /* 見出しなどのアクセントカラー */
   --color-link: gold;           /* a要素の基本色 */
