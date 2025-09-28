@@ -21,7 +21,7 @@
   /* ベースカラー */
   --color-bg: #ff1493;          /* 背景（既存の背景色を踏襲） */
   --color-text: #990c57;        /* 文章の基本色 */
-  --color-accent: #fa709a;      /* 見出しなどのアクセントカラー */
+  --color-accent: #fffcfd;      /* 見出しなどのアクセントカラー */
   --color-link: black;           /* a要素の基本色 */
   --color-link-hover: #ba3f3f;  /* hover時（背景色と同色で薄くなる効果に合わせる） */
   --color-chip-bg: #331212;     /* 段落背景に使われていた濃色 */
