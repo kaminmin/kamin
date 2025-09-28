@@ -1,0 +1,372 @@
+
+/* ============================================================
+   KAMIN 共通スタイル（styles.css）
+   目的: 既存の stylesheet_rev.css / stylesheet_rev2.css / responsive.css を統合し、
+         一貫したトークン・レイアウト・レスポンシブ設計に整理
+   注意: 値は既存サイトの見た目を極力維持しながら、重複や競合を解消
+   作成日: 2025-09-28
+   ============================================================ */
+
+/* ------------------------------
+   1) CSSリセット & ベース
+   ------------------------------ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 文字・色などのテーマ変数（カラートークン） */
+:root {
+  /* ベースカラー */
+  --color-bg: #ba3f3f;          /* 背景（既存の背景色を踏襲） */
+  --color-text: #ffffff;        /* 文章の基本色 */
+  --color-accent: #fa709a;      /* 見出しなどのアクセントカラー */
+  --color-link: gold;           /* a要素の基本色 */
+  --color-link-hover: #ba3f3f;  /* hover時（背景色と同色で薄くなる効果に合わせる） */
+  --color-chip-bg: #331212;     /* 段落背景に使われていた濃色 */
+
+  /* コンポーネントの寸法 */
+  --radius-l: 30px;
+  --radius-m: 20px;
+  --radius-s: 10px;
+
+  /* レイアウト寸法 */
+  --header-height: 100px;       /* 既存: header=100px / newsbox margin-top=100px を整合 */
+  --container-max: 1200px;
+}
+
+/* 文字・背景のベース設定 */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* 汎用クリア要素 */
+.clear {
+  clear: both;
+}
+
+/* ------------------------------
+   2) レイアウト: ヘッダー/メイン/フッター
+   ------------------------------ */
+
+/* ヘッダー: 固定配置 + 中央寄せ + ナビ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+  background-color: var(--color-bg);
+}
+
+/* ロゴ画像（左寄せだった指定を維持） */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  position: relative;
+}
+
+.kaminjpg {
+  height: var(--header-height);
+  width: auto;
+  max-width: 1000px;
+  min-width: 50px;
+  float: left;
+}
+
+/* ヘッダー内ナビ */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin-left: auto;       /* 右側へ寄せる */
+  padding: 4px 8px;
+}
+
+.nav-links li a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 18px;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+/* 既存の hover 表現（色・透過）を踏襲 */
+.nav-links li a:hover {
+  opacity: 0.7;
+  color: var(--color-link-hover);
+}
+
+/* メイン: 固定ヘッダーの分だけ上に余白を確保 */
+main {
+  padding-top: calc(var(--header-height) + 10px);
+  background: var(--color-bg);
+}
+
+/* ------------------------------
+   3) タイポグラフィ
+   ------------------------------ */
+
+h1 {
+  color: var(--color-accent);
+  font-size: clamp(24px, 3vw, 36px);
+  margin: 0 5%;
+  padding: 0 2% 1% 2%;
+}
+
+h2 {
+  color: var(--color-text);
+  font-size: clamp(20px, 2.5vw, 28px);
+  margin: 0 5%;
+  padding: 0 2%;
+}
+
+h3 {
+  color: #e6e6e6;
+  font-size: clamp(14px, 2vw, 18px);
+  margin: 0 5%;
+  padding: 10px 2%;
+  border-radius: 15px;
+}
+
+/* リンク */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  opacity: 0.8;
+}
+
+/* 段落: 既存の「濃い背景+白文字」チップを継承 */
+p {
+  margin: 0 5%;
+  padding: 10px 2%;
+  font-size: clamp(14px, 1.8vw, 18px);
+  color: var(--color-text);
+  background: var(--color-chip-bg);
+  border-radius: var(--radius-s);
+  max-width: 90ch;
+}
+
+/* 強調（既存の g 要素はHTML標準では無効。span.g-em に置換推奨） */
+.g-em {
+  color: red;
+  font-style: oblique;
+}
+
+/* ------------------------------
+   4) セクション固有
+   ------------------------------ */
+
+/* News セクション */
+.newsbox {
+  margin-top: 0; /* header padding-topで吸収するため0に */
+  padding-top: 20px;
+  width: 100%;
+}
+
+.videobox {
+  text-align: center;
+  padding: 0.5% 0 1%;
+}
+
+.DM {
+  padding-bottom: 1%;
+}
+
+/* Commission セクション */
+.workform {
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* SNSリンク帯 */
+.links {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+
+.fa {
+  font-size: clamp(18px, 3vw, 28px);
+  color: var(--color-text);
+}
+
+.btn {
+  display: inline-block;
+  margin: 15px 20px;
+  border-radius: 5px;
+  color: var(--color-bg);
+  background: var(--color-bg);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff2e2e;
+}
+
+/* ポートフォリオ（制作楽曲など） */
+.portofolio {
+  text-align: center;
+}
+
+.portofolio h1 {
+  text-align: left;
+}
+
+.jacket_box {
+  display: inline-block;
+  width: clamp(180px, 20%, 260px);
+  margin: 30px 10px;
+}
+
+.jacket {
+  width: 100%;
+  height: auto;
+  border: 2px solid #fff;
+  border-radius: var(--radius-l);
+}
+
+/* ブートレグ・ラジオ用ジャケット */
+.bootbox {
+  padding-bottom: 30px;
+}
+
+.boot_jacket_box {
+  display: inline-block;
+  width: clamp(160px, 15%, 220px);
+  margin: 30px 10px;
+}
+
+.radio_jacket_box {
+  display: inline-block;
+  width: min(60%, 560px);
+  margin: 30px 10px;
+}
+
+.boottitles {
+  padding-bottom: 10px;
+}
+
+.boottitles a {
+  color: #fee140;
+}
+
+.boottitles a:hover {
+  color: #fee140;
+  opacity: 0.7;
+}
+
+/* タイムライン（未使用クラスだが互換維持） */
+.timeline {
+  padding-bottom: 40px;
+}
+
+/* フッター */
+footer {
+  background: var(--color-bg);
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ------------------------------
+   5) 埋め込みメディア
+   ------------------------------ */
+
+/* iframe(Youtube) は比率固定のレスポンシブに */
+.videobox iframe {
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9; /* 高さは自動算出 */
+  border: 0;
+}
+
+/* ------------------------------
+   6) キーアニメーション
+   ------------------------------ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ------------------------------
+   7) レスポンシブ調整
+   既存の responsive.css の内容を統合し最適化
+   ------------------------------ */
+
+/* 1000px以下 */
+@media (max-width: 1000px) {
+  header {
+    height: 80px;                    /* ヘッダー高さの縮小 */
+  }
+  :root {
+    --header-height: 80px;           /* 固定ヘッダーとmain余白を自動で同期 */
+  }
+
+  .jacket_box {
+    width: 30%;
+    margin: 30px 10px;
+  }
+
+  p {
+    max-width: 90%;
+    font-size: smaller;
+  }
+}
+
+/* 670px以下（スマホ） */
+@media (max-width: 670px) {
+  header {
+    height: 60px;
+    padding: 0 10px;
+  }
+  :root {
+    --header-height: 60px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  .jacket_box {
+    width: 45%;
+    margin: 20px 5px;
+  }
+
+  .jacket {
+    border-radius: var(--radius-m);
+    border-width: 1px;
+  }
+
+  p {
+    font-size: small;
+    padding: 8px;
+    max-width: 95%;
+  }
+}
