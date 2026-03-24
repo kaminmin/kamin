@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;700&display=swap');
 
-/* ------------------------------
-   1) Reset & Base
------------------------------- */
 *,
 *::before,
 *::after {
@@ -21,9 +18,10 @@ body {
 }
 
 img,
-iframe {
-  max-width: 100%;
+iframe,
+svg {
   display: block;
+  max-width: 100%;
 }
 
 :root {
@@ -81,9 +79,6 @@ a:hover {
   margin: 0 auto;
 }
 
-/* ------------------------------
-   2) Header
------------------------------- */
 .site-header {
   position: fixed;
   inset: 0 0 auto 0;
@@ -143,9 +138,6 @@ a:hover {
   color: var(--color-highlight);
 }
 
-/* ------------------------------
-   3) Main / Section
------------------------------- */
 main {
   padding-top: calc(var(--header-height) + 24px);
 }
@@ -166,9 +158,6 @@ main {
   padding-top: 44px;
 }
 
-/* ------------------------------
-   4) Typography
------------------------------- */
 h1 {
   font-family: 'Space Mono', monospace;
   color: var(--color-accent);
@@ -186,7 +175,7 @@ h1 {
   width: 48px;
   height: 2px;
   margin-top: 12px;
-  background: linear-gradient(90deg, var(--color-highlight), rgba(224,255,96,0.65));
+  background: linear-gradient(90deg, var(--color-highlight), rgba(224, 255, 96, 0.65));
   border-radius: 999px;
 }
 
@@ -211,9 +200,6 @@ p {
   color: var(--color-text);
 }
 
-/* ------------------------------
-   5) Contact
------------------------------- */
 .contact-card {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -243,9 +229,6 @@ p {
   word-break: break-word;
 }
 
-/* ------------------------------
-   6) Social Buttons
------------------------------- */
 .social-links {
   display: flex;
   justify-content: center;
@@ -271,14 +254,6 @@ p {
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.btn i {
-  position: relative;
-  z-index: 1;
-  font-size: 22px;
-  color: var(--color-text-muted);
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
 .btn::after {
   content: "";
   position: absolute;
@@ -289,6 +264,15 @@ p {
   transition: opacity 0.2s ease;
   z-index: 0;
   pointer-events: none;
+}
+
+.icon {
+  position: relative;
+  z-index: 1;
+  width: 22px;
+  height: 22px;
+  fill: var(--color-text-muted);
+  transition: transform 0.2s ease, fill 0.2s ease;
 }
 
 .btn:hover {
@@ -303,14 +287,11 @@ p {
   opacity: 1;
 }
 
-.btn:hover i {
-  color: var(--color-highlight);
+.btn:hover .icon {
+  fill: var(--color-highlight);
   transform: scale(1.08);
 }
 
-/* ------------------------------
-   7) Card Grid
------------------------------- */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -362,9 +343,6 @@ p {
   filter: saturate(1.06) contrast(1.02);
 }
 
-/* ------------------------------
-   8) Single Feature
------------------------------- */
 .single-feature {
   display: grid;
   justify-items: center;
@@ -374,6 +352,7 @@ p {
 .feature-image-link {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -381,17 +360,22 @@ p {
   width: min(100%, 520px);
 }
 
-/* RAVE 2D 専用 */
 .rave2d-image-link {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .rave2d-image {
+  display: block;
   width: min(100%, 720px);
+  max-width: 720px;
+  height: auto;
   aspect-ratio: auto;
   object-fit: contain;
+  object-position: center center;
+  margin-inline: auto;
   background: transparent;
   padding: 0;
 }
@@ -410,9 +394,6 @@ p {
   text-align: center;
 }
 
-/* ------------------------------
-   9) Video
------------------------------- */
 .video-stack {
   display: grid;
   gap: 40px;
@@ -432,26 +413,17 @@ p {
   box-shadow: var(--shadow-soft);
 }
 
-/* ------------------------------
-   10) Footer
------------------------------- */
 .site-footer {
   border-top: 1px solid var(--color-border);
   padding: 24px 0 36px;
   margin-top: 20px;
 }
 
-/* ------------------------------
-   11) Animation
------------------------------- */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ------------------------------
-   12) Responsive
------------------------------- */
 @media (max-width: 1000px) {
   :root {
     --header-height: 68px;
@@ -468,6 +440,7 @@ p {
 
   .rave2d-image {
     width: min(100%, 640px);
+    max-width: 640px;
   }
 }
 
@@ -509,7 +482,8 @@ p {
   }
 
   .rave2d-image {
-    width: min(100%, 100%);
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -541,7 +515,8 @@ p {
     height: 46px;
   }
 
-  .btn i {
-    font-size: 20px;
+  .icon {
+    width: 20px;
+    height: 20px;
   }
 }
