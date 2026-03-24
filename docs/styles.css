@@ -1,13 +1,8 @@
-/* ============================================================
-   KAMIN 共通スタイル（styles.css）
-   テーマ: Dark Charcoal — #171717 ベースのダーク系リデザイン
-   ============================================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;700&display=swap');
 
 /* ------------------------------
-   1) CSSリセット & ベース
-   ------------------------------ */
+   1) Reset & Base
+------------------------------ */
 *,
 *::before,
 *::after {
@@ -38,7 +33,7 @@ iframe {
   --color-border: #2e2e2e;
 
   --color-text: #c8c8c8;
-  --color-text-muted: #6a6a6a;
+  --color-text-muted: #8b8b8b;
   --color-accent: #f0f0f0;
   --color-highlight: #ff1493;
   --color-highlight-dim: rgba(255, 20, 147, 0.12);
@@ -47,8 +42,8 @@ iframe {
   --color-link-hover: #e0ff60;
 
   --radius-l: 24px;
-  --radius-m: 16px;
-  --radius-s: 8px;
+  --radius-m: 18px;
+  --radius-s: 10px;
 
   --header-height: 80px;
   --container-max: 1200px;
@@ -64,7 +59,11 @@ body {
   color: var(--color-text);
   line-height: 1.7;
   animation: fadeIn 1.2s ease-in-out;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  background-image:
+    radial-gradient(circle at 20% 0%, rgba(255, 20, 147, 0.08), transparent 28%),
+    radial-gradient(circle at 100% 20%, rgba(224, 255, 96, 0.04), transparent 22%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  background-attachment: fixed;
 }
 
 a {
@@ -83,8 +82,8 @@ a:hover {
 }
 
 /* ------------------------------
-   2) ヘッダー / ナビ
-   ------------------------------ */
+   2) Header
+------------------------------ */
 .site-header {
   position: fixed;
   inset: 0 0 auto 0;
@@ -134,7 +133,6 @@ a:hover {
 .nav-links li a {
   font-family: 'Space Mono', monospace;
   color: var(--color-text-muted);
-  text-decoration: none;
   font-size: 13px;
   letter-spacing: 0.05em;
   padding: 8px 4px;
@@ -146,8 +144,8 @@ a:hover {
 }
 
 /* ------------------------------
-   3) メイン / セクション
-   ------------------------------ */
+   3) Main / Section
+------------------------------ */
 main {
   padding-top: calc(var(--header-height) + 24px);
 }
@@ -169,25 +167,27 @@ main {
 }
 
 /* ------------------------------
-   4) タイポグラフィ
-   ------------------------------ */
+   4) Typography
+------------------------------ */
 h1 {
   font-family: 'Space Mono', monospace;
   color: var(--color-accent);
-  font-size: clamp(22px, 3vw, 34px);
+  font-size: clamp(24px, 3vw, 36px);
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.15;
   margin: 0;
+  text-shadow: 0 0 24px rgba(255, 255, 255, 0.02);
 }
 
 .section-heading h1::after {
-  content: "";
+  content: '';
   display: block;
-  width: 40px;
+  width: 48px;
   height: 2px;
-  background: var(--color-highlight);
   margin-top: 12px;
+  background: linear-gradient(90deg, var(--color-highlight), rgba(224,255,96,0.65));
+  border-radius: 999px;
 }
 
 h2 {
@@ -213,7 +213,7 @@ p {
 
 /* ------------------------------
    5) Contact
-   ------------------------------ */
+------------------------------ */
 .contact-card {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -244,48 +244,73 @@ p {
 }
 
 /* ------------------------------
-   6) SNSリンク
-   ------------------------------ */
+   6) Social Buttons
+------------------------------ */
 .social-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   flex-wrap: wrap;
-  padding-top: 28px;
-}
-
-.fa {
-  font-size: clamp(18px, 2.5vw, 24px);
-  color: var(--color-text-muted);
-  transition: color 0.2s ease;
+  padding: 18px 0 6px;
 }
 
 .btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 52px;
+  height: 52px;
   border-radius: 999px;
-  width: 44px;
-  height: 44px;
-  background: var(--color-bg-card);
+  background: linear-gradient(180deg, #262626 0%, #1d1d1d 100%);
   border: 1px solid var(--color-border);
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.03),
+    0 10px 30px rgba(0,0,0,0.22);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn i {
+  position: relative;
+  z-index: 1;
+  font-size: 22px;
+  color: var(--color-text-muted);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,20,147,0.25), rgba(224,255,96,0.08));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .btn:hover {
-  transform: translateY(-1px);
-  background: var(--color-highlight-dim);
+  transform: translateY(-2px) scale(1.03);
   border-color: var(--color-highlight);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.04),
+    0 14px 36px rgba(255, 20, 147, 0.10);
 }
 
-.btn:hover .fa {
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn:hover i {
   color: var(--color-highlight);
+  transform: scale(1.08);
 }
 
 /* ------------------------------
-   7) カードグリッド
-   ------------------------------ */
+   7) Card Grid
+------------------------------ */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -317,27 +342,58 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-m);
   background: var(--color-bg-card);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow:
+    0 10px 24px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.02);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
 }
 
 .media-card a:hover .jacket,
 .feature-image-link:hover .jacket {
-  transform: translateY(-4px) scale(1.02);
+  transform: translateY(-6px) scale(1.02);
   border-color: var(--color-highlight);
-  box-shadow: 0 12px 40px rgba(224, 255, 96, 0.15);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.34),
+    0 0 0 1px rgba(255,20,147,0.12);
+  filter: saturate(1.06) contrast(1.02);
 }
 
 /* ------------------------------
-   8) シングルフィーチャー
-   ------------------------------ */
+   8) Single Feature
+------------------------------ */
 .single-feature {
   display: grid;
   justify-items: center;
   gap: 20px;
 }
 
+.feature-image-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .feature-image {
   width: min(100%, 520px);
+}
+
+/* RAVE 2D 専用 */
+.rave2d-image-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rave2d-image {
+  width: min(100%, 720px);
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: transparent;
+  padding: 0;
 }
 
 .detail {
@@ -350,9 +406,13 @@ p {
   line-height: 1.9;
 }
 
+.detail-center {
+  text-align: center;
+}
+
 /* ------------------------------
-   9) 動画
-   ------------------------------ */
+   9) Video
+------------------------------ */
 .video-stack {
   display: grid;
   gap: 40px;
@@ -373,8 +433,8 @@ p {
 }
 
 /* ------------------------------
-   10) フッター
-   ------------------------------ */
+   10) Footer
+------------------------------ */
 .site-footer {
   border-top: 1px solid var(--color-border);
   padding: 24px 0 36px;
@@ -382,16 +442,16 @@ p {
 }
 
 /* ------------------------------
-   11) アニメーション
-   ------------------------------ */
+   11) Animation
+------------------------------ */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ------------------------------
-   12) レスポンシブ
-   ------------------------------ */
+   12) Responsive
+------------------------------ */
 @media (max-width: 1000px) {
   :root {
     --header-height: 68px;
@@ -404,6 +464,10 @@ p {
 
   .card-grid {
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+
+  .rave2d-image {
+    width: min(100%, 640px);
   }
 }
 
@@ -443,6 +507,10 @@ p {
   .compact-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .rave2d-image {
+    width: min(100%, 100%);
+  }
 }
 
 @media (max-width: 480px) {
@@ -469,7 +537,11 @@ p {
   }
 
   .btn {
-    width: 42px;
-    height: 42px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .btn i {
+    font-size: 20px;
   }
 }
