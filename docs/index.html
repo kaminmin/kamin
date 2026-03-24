@@ -9,14 +9,38 @@
   <meta property="og:image" content="kamin.jpeg">
 
   <title>KAMIN</title>
-
-  <!-- Font Awesome 最新系用: 自分のKitコードに差し替え -->
-  <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
-
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <!-- SVG Sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true" focusable="false">
+    <symbol id="icon-x" viewBox="0 0 24 24">
+      <path d="M18.901 1.154h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.64 7.584H.47l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932Zm-1.29 19.49h2.04L6.486 3.24H4.298l13.313 17.404Z"/>
+    </symbol>
+
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.95 1.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"/>
+    </symbol>
+
+    <symbol id="icon-soundcloud" viewBox="0 0 24 24">
+      <path d="M10.74 7.06a4.86 4.86 0 0 1 5.9 4.76v.18a3.27 3.27 0 1 1 .82 6.43H4.31a1.31 1.31 0 0 1 0-2.62h.44V9.67a.88.88 0 1 1 1.75 0v6.14h1.2V8.55a.88.88 0 0 1 1.76 0v7.26h1.2V7.94a.88.88 0 0 1 .88-.88.88.88 0 0 1 .88.88v7.87h.6v-4a.88.88 0 1 1 1.76 0v4h2.68a1.52 1.52 0 0 0 0-3.04h-.58v-.95a3.1 3.1 0 0 0-4.3-2.87V7.06Z"/>
+    </symbol>
+
+    <symbol id="icon-youtube" viewBox="0 0 24 24">
+      <path d="M23 12.003s0-3.05-.387-4.523a2.87 2.87 0 0 0-2.027-2.031C19.11 5.06 12 5.06 12 5.06s-7.11 0-8.586.388A2.87 2.87 0 0 0 1.387 7.48C1 8.952 1 12.003 1 12.003s0 3.05.387 4.522a2.87 2.87 0 0 0 2.027 2.032c1.476.387 8.586.387 8.586.387s7.11 0 8.586-.387a2.87 2.87 0 0 0 2.027-2.032C23 15.053 23 12.003 23 12.003ZM9.724 15.8V8.206l6.612 3.797L9.724 15.8Z"/>
+    </symbol>
+
+    <symbol id="icon-spotify" viewBox="0 0 24 24">
+      <path d="M12 1.75A10.25 10.25 0 1 0 22.25 12 10.26 10.26 0 0 0 12 1.75Zm4.702 14.77a.75.75 0 0 1-1.032.247 9.62 9.62 0 0 0-7.522-.957.75.75 0 0 1-.41-1.443 11.11 11.11 0 0 1 8.708 1.11.75.75 0 0 1 .256 1.043Zm1.473-2.771a.937.937 0 0 1-1.287.309 11.88 11.88 0 0 0-9.034-1.204.937.937 0 0 1-.517-1.802 13.75 13.75 0 0 1 10.478 1.394.937.937 0 0 1 .36 1.303Zm.125-2.886a14.2 14.2 0 0 0-10.995-1.38 1.125 1.125 0 1 1-.631-2.16 16.45 16.45 0 0 1 12.755 1.598 1.125 1.125 0 0 1-1.129 1.942Z"/>
+    </symbol>
+
+    <symbol id="icon-note" viewBox="0 0 24 24">
+      <path d="M7 3.5h7.9a2.6 2.6 0 0 1 2.6 2.6V20.5l-4.2-2.2-4.2 2.2V6.1A2.6 2.6 0 0 1 11.7 3.5H7Zm4.7 1.8a.8.8 0 0 0-.8.8v11.43l2.4-1.26 2.4 1.26V6.1a.8.8 0 0 0-.8-.8h-3.2Z"/>
+      <path d="M5.4 5.2A1.9 1.9 0 0 0 3.5 7.1v9.8a1.9 1.9 0 0 0 1.9 1.9h1.2V17H5.4a.1.1 0 0 1-.1-.1V7.1a.1.1 0 0 1 .1-.1h1.2V5.2H5.4Z"/>
+    </symbol>
+  </svg>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="#" class="logo-link" aria-label="KAMIN ホーム">
@@ -35,7 +59,6 @@
   </header>
 
   <main>
-    <!-- Contact -->
     <section id="contact" class="section section-contact">
       <div class="container">
         <div class="section-heading">
@@ -57,28 +80,27 @@
 
         <div class="links social-links" aria-label="SNS links">
           <a href="https://twitter.com/kamin_go" class="btn twitter" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-x-twitter"></i>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-x"></use></svg>
           </a>
           <a href="https://www.instagram.com/kamiingo/" class="btn instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-instagram"></i>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-instagram"></use></svg>
           </a>
           <a href="https://soundcloud.com/kaminiscoming" class="btn soundcloud" aria-label="SoundCloud" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-soundcloud"></i>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-soundcloud"></use></svg>
           </a>
           <a href="https://www.youtube.com/channel/UCc90ufB4Of69djIXPryFuGw" class="btn youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-youtube"></i>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-youtube"></use></svg>
           </a>
           <a href="https://open.spotify.com/playlist/6vtPxmojKjXWZbcfhpzsOe?si=2d8742bbdd4c4424" class="btn spotify" aria-label="Spotify" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-spotify"></i>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-spotify"></use></svg>
           </a>
           <a href="https://note.com/kamywu" class="btn note" aria-label="note" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-pen-nib"></i>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-note"></use></svg>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Original Tracks -->
     <section id="music" class="section">
       <div class="container">
         <div class="section-heading">
@@ -173,7 +195,6 @@
       </div>
     </section>
 
-    <!-- Bootlegs -->
     <section class="section section-bordered">
       <div class="container">
         <div class="section-heading">
@@ -219,7 +240,6 @@
       </div>
     </section>
 
-    <!-- RAVE 2D -->
     <section id="rave2d" class="section section-bordered">
       <div class="container">
         <div class="section-heading">
@@ -238,7 +258,6 @@
       </div>
     </section>
 
-    <!-- Hosted Events -->
     <section id="events" class="section section-bordered">
       <div class="container">
         <div class="section-heading">
@@ -274,7 +293,6 @@
       </div>
     </section>
 
-    <!-- DJ Act -->
     <section class="section section-bordered">
       <div class="container">
         <div class="section-heading">
@@ -318,13 +336,13 @@
     <div class="container">
       <div class="links social-links" aria-label="Footer social links">
         <a href="https://twitter.com/kamin_go" class="btn twitter" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-x-twitter"></i>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-x"></use></svg>
         </a>
         <a href="https://www.instagram.com/kamiingo/" class="btn instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-instagram"></i>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-instagram"></use></svg>
         </a>
         <a href="https://soundcloud.com/kaminiscoming" class="btn soundcloud" aria-label="SoundCloud" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-soundcloud"></i>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-soundcloud"></use></svg>
         </a>
       </div>
     </div>
